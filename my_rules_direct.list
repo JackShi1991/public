@@ -2,6 +2,7 @@
 
 # 特定网站
 DOMAIN-SUFFIX,gzlib.gov.cn
+DOMAIN-SUFFIX,gzlib.org.cn
 
 # 关键词直连
-DOMAIN-KEYWORD,gov
+#DOMAIN-KEYWORD,gov
