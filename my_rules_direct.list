@@ -1,0 +1,7 @@
+# 直连列表
+
+# 特定网站
+DOMAIN-SUFFIX,gzlib.gov.cn
+
+# 关键词直连
+DOMAIN-KEYWORD,gov
