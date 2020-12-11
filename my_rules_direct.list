@@ -3,6 +3,8 @@
 # 特定网站
 DOMAIN-SUFFIX,gzlib.gov.cn
 DOMAIN-SUFFIX,gzlib.org.cn
+DOMAIN-SUFFIX,seagm.com
 
 # 关键词直连
 #DOMAIN-KEYWORD,gov
+#DOMAIN-KEYWORD,seagm
