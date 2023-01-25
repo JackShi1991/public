@@ -4,3 +4,10 @@ DOMAIN-SUFFIX,eccdnx.com
 DOMAIN-SUFFIX,pubgbluehole.com
 DOMAIN-SUFFIX,pubgha.com
 DOMAIN-SUFFIX,playbattlegrounds.com
+
+DOMAIN-SUFFIX,*steamserver*
+DOMAIN-SUFFIX,*eccdnx*
+DOMAIN-SUFFIX,*pubgbluehole*
+DOMAIN-SUFFIX,*pubgha*
+DOMAIN-SUFFIX,*playbattlegrounds*
+DOMAIN-SUFFIX,*prod-live-images*
