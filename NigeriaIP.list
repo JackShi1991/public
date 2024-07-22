@@ -1,8 +1,6 @@
 DOMAIN-SUFFIX,chippercash.com
 DOMAIN-KEYWORD,chipper
 USER-AGENT,chipper*
-
-
 IP-CIDR,41.57.120.0/22,no-resolve
 IP-CIDR,41.58.0.0/16,no-resolve
 IP-CIDR,41.67.128.0/18,no-resolve
