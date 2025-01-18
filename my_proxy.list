@@ -28,3 +28,7 @@ DOMAIN-SUFFIX,sun.com
 ;c1v
 DOMAIN-SUFFIX,c1vhosting.it
 DOMAIN-KEYWORD,c1vhosting
+
+;bybit.com
+DOMAIN-SUFFIX,bybit.com
+DOMAIN-KEYWORD,bybit
