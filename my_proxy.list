@@ -4,5 +4,8 @@ DOMAIN-KEYWORD,c1vhosting
 
 ;bybit.com
 DOMAIN-SUFFIX,bybit.com
+DOMAIN-KEYWORD,bybit
 
-
+;bian
+DOMAIN-SUFFIX,binance.com
+DOMAIN-KEYWORD,binance
