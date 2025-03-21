@@ -3,14 +3,5 @@
 # DOMAIN-SUFFIX: 
 # IP-ASN: 
 # IP-CIDR: 
-IP-CIDR,152.89.168.152/32
 
-;c1v
-DOMAIN-SUFFIX,c1vhosting.it
-DOMAIN-KEYWORD,c1vhosting
 
-;btc
-DOMAIN-SUFFIX,bybit.com
-DOMAIN-KEYWORD,bybit
-DOMAIN-SUFFIX,binance.com
-DOMAIN-KEYWORD,binance
