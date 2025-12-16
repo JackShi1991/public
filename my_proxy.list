@@ -3,7 +3,6 @@
 # DOMAIN-SUFFIX: 
 # IP-ASN: 
 # IP-CIDR: 
-
-DOMAIN-SUFFIX,grok.com
-DOMAIN-SUFFIX,cmav.pp.ua
+#DOMAIN-SUFFIX,grok.com
+#DOMAIN-SUFFIX,cmav.pp.ua
 
