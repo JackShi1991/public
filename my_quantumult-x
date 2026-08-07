@@ -81,7 +81,7 @@ static = Other, resource-tag-regex=🧁 我的订阅, server-tag-regex=印度|�
 [server_local]
 
 [server_remote]
-https://example.com/subscribe.snippet,tag=🧁 我的订阅,enabled=true, img-url= https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Heart.png
+https://miao.cmav.pp.ua/d20xuj?t=qx,tag=🧁 我的订阅,enabled=true, img-url= https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Heart.png
 
 
 [filter_local]
