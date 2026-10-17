@@ -62,11 +62,11 @@ static = Apple, Hong Kong, Singapore, Taiwan, United States, Japan, Korea, Other
 static = Microsoft, Hong Kong, Singapore, Taiwan, United States, Japan, Korea, Other, direct,  img-url= https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png
 
 #劫持（运营商、臭名昭著的诈骗网站或恶意应用）
-static = Hijacking, reject, direct, img-url=https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hijacking.png
+static = Hijacking, reject, direct, img-url= https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hijacking.png
 #广告
 static = Advertising, reject, img-url= https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Advertising.png
 
-static = Final, OutSide, direct, img-url=https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png
+static = Final, OutSide, direct, img-url= https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png
 
 
 // 按地区分类
@@ -109,8 +109,8 @@ https://r.sveir.xyz/Rules/Services/Apple.list, tag=Apple, enabled=true
 https://r.sveir.xyz/Rules/Advertising/Hijacking.list, tag=Hijacking, enabled=true
 https://r.sveir.xyz/Rules/Advertising/AdReject.list, tag=Advertising, enabled=true
 
-https://r.sveir.xyz/Rules/Services/Google.list, tag=Google, force-policy=Proxy, enabled=true
-https://r.sveir.xyz/Rules/Region/Global.list, tag=Global, force-policy=Proxy, enabled=true
+https://r.sveir.xyz/Rules/Services/Google.list, tag=Google, force-policy=OutSide, enabled=true
+https://r.sveir.xyz/Rules/Region/Global.list, tag=Global, force-policy=OutSide, enabled=true
 https://r.sveir.xyz/Rules/Region/China.list, tag=Domestic, force-policy=direct, enabled=true
 https://r.sveir.xyz/Rules/Media/DomesticMedia.list, tag=DomesticMedia, force-policy=direct, enabled=true
 
