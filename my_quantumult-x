@@ -58,6 +58,8 @@ server = 119.28.28.28
 static = OutSide, Hong Kong, Singapore, Taiwan, United States, Japan, Korea, Other, direct,  img-url=https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Airport.png
 static = Final, OutSide, direct, img-url=https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png
 // 分流
+static = ChatAI, direct, OutSide, img-url= https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png
+
 static = DomesticMedia, direct, OutSide, img-url= https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Domestic.png
 static = Domestic, direct, OutSide, img-url= https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Back.png
 static = Apple, direct, OutSide, img-url= https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png
