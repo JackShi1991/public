@@ -53,13 +53,13 @@ doh-server = https://doh.pub/dns-query, https://223.5.5.5/dns-query, https://223
 
 # 分流策略组
 [policy]
-static = Proxy, Hong Kong, Singapore, Taiwan, United States, Japan, Korea, Other, direct,  img-url=https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Airport.png
+static = Proxy, Hong Kong, Singapore, Taiwan, United States, Japan, Korea, Other, direct,  img-url= https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Airport.png
 static = ChatGPT, Hong Kong, Singapore, Taiwan, United States, Japan, Korea, Other, direct,  img-url= https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png
 static = Netflix, Hong Kong, Singapore, Taiwan, United States, Japan, Korea, Other, direct,  img-url= https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png
 static = Disney, Hong Kong, Singapore, Taiwan, United States, Japan, Korea, Other, direct,  img-url= https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Disney+_1.png
 
 static = Apple, Hong Kong, Singapore, Taiwan, United States, Japan, Korea, Other, direct,  img-url= https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png
-static = Microsoft, Hong Kong, Singapore, Taiwan, United States, Japan, Korea, Other, direct,  img-url=https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png
+static = Microsoft, Hong Kong, Singapore, Taiwan, United States, Japan, Korea, Other, direct,  img-url= https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png
 
 #劫持（运营商、臭名昭著的诈骗网站或恶意应用）
 static = Hijacking, reject, direct, img-url=https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hijacking.png
