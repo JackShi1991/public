@@ -130,7 +130,7 @@ https://yfamilys.com/rewrite/youtube.conf, tag=YouTube去广告, update-interval
 https://yfamilys.com/rewrite/xcz.conf, tag=西窗烛, update-interval=172800, opt-parser=false, enabled=true
 https://yfamilys.com/rewrite/adultraplus.conf, tag=去开屏广告融合版ultra+, update-interval=172800, opt-parser=false, enabled=true
 https://yfamilys.com/rewrite/caixin.conf, tag=财新周刊, update-interval=172800, opt-parser=false, enabled=true
-https://yfamilys.com/rewrite/WPS.conf, tag=wps, update-interval=172800, opt-parser=false, enabled=true
+https://yfamilys.com/rewrite/WPS.conf, tag=wps会员, update-interval=172800, opt-parser=false, enabled=true
 https://yfamilys.com/rewrite/SpotifyPremium.conf, tag=SpotifyPremium, update-interval=172800, opt-parser=false, enabled=true
 https://yfamilys.com/rewrite/CamScanner.conf, tag=扫描全能王, update-interval=172800, opt-parser=false, enabled=true
 https://yfamilys.com/rewrite/ZhihuBlock.conf,tag=知乎去广告, update-interval=172800, opt-parser=false, enabled=true
@@ -140,6 +140,7 @@ https://yfamilys.com/rewrite/tpp.conf,tag=支付宝内淘票票显示豆瓣评�
 https://yfamilys.com/rewrite/wyyyy.conf,tag=网易云音质解锁, update-interval=172800, opt-parser=false, enabled=true
 https://yfamilys.com/rewrite/wechatad.conf,tag=微信公众号去广告, update-interval=172800, opt-parser=false, enabled=true
 https://yfamilys.com/rewrite/AdBlock.conf,tag=广告屏蔽, update-interval=172800, opt-parser=false, enabled=true
+https://yfamilys.com/rewrite/thunder.conf,tag=迅雷会员解锁, update-interval=172800, opt-parser=false, enabled=true
 # 网页去广告
 https://r.sveir.xyz/Rewrite/AdBlock/WebAdBlock.adblock, tag=常用网页去广告
 
