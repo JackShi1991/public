@@ -42,10 +42,9 @@ excluded_routes = 192.168.0.0/16, 172.16.0.0/12, 100.64.0.0/10, 10.0.0.0/8, 239.
 
 // 指定 DNS 服务器，并发响应选取最优结果
 server = 119.29.29.29
-server = 182.254.116.116
 server = 223.5.5.5
-server = 223.6.6.6
-server = 119.28.28.28
+server = 2400:3200::1
+server = 2402:4e00::
 
 # ⚠️ 注意 不建议在此对 微信以及QQ等即时通讯工具进行 指定域名分配DNS
 # 此操作将可能导致微信消息延迟推送
@@ -55,21 +54,22 @@ server = 119.28.28.28
 
 # 分流策略组
 [policy]
-static = OutSide, Hong Kong, Singapore, Taiwan, United States, Japan, Korea, Other, direct,  img-url=https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Airport.png
-static = Final, OutSide, direct, img-url=https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png
-// 分流
-static = ChatAI, direct, OutSide, img-url= https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png
+static = Proxy, Hong Kong, Singapore, Taiwan, United States, Japan, Korea, Other, direct,  img-url=https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Airport.png
+static = ChatGPT, Hong Kong, Singapore, Taiwan, United States, Japan, Korea, Other, direct,  img-url= https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png
+static = Netflix, Hong Kong, Singapore, Taiwan, United States, Japan, Korea, Other, direct,  img-url= https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png
+static = Disney, Hong Kong, Singapore, Taiwan, United States, Japan, Korea, Other, direct,  img-url= https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Disney+_1.png
 
-static = DomesticMedia, direct, OutSide, img-url= https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Domestic.png
-static = Domestic, direct, OutSide, img-url= https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Back.png
-static = Apple, direct, OutSide, img-url= https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png
-static = Apple Domestic, direct, OutSide, img-url= https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple_Update.png
-static = Google, OutSide, img-url=https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google.png
-static = Google Domestic, direct, OutSide, img-url= https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png
-static = Microsoft, direct, OutSide, img-url=https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png
-static = Microsoft Domestic, direct, OutSide, img-url= https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png
+static = Apple, Hong Kong, Singapore, Taiwan, United States, Japan, Korea, Other, direct,  img-url= https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png
+static = Microsoft, Hong Kong, Singapore, Taiwan, United States, Japan, Korea, Other, direct,  img-url=https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png
+
+#劫持（运营商、臭名昭著的诈骗网站或恶意应用）
 static = Hijacking, reject, direct, img-url=https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hijacking.png
+#广告
 static = Advertising, reject, img-url= https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Advertising.png
+
+static = Final, Proxy, direct, img-url=https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png
+
+
 // 按地区分类
 static = Hong Kong, resource-tag-regex=🧁 我的订阅, server-tag-regex=香港|Hong Kong|HK|hk, img-url=https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png
 static = Singapore, resource-tag-regex=🧁 我的订阅, server-tag-regex=新加坡|Singapore|SG|sg, img-url=https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Singapore.png
@@ -98,15 +98,24 @@ ip-cidr, 224.0.0.0/24, direct
 final, Final
 
 [filter_remote]
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/QuantumultX/Claude/Claude.list,tag=ChatAI, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/QuantumultX/OpenAI/OpenAI.list,tag=ChatAI, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/QuantumultX/Gemini/Gemini.list,tag=ChatAI, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/QuantumultX/Bing/Bing.list,tag=ChatAI, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/QuantumultX/Netflix/Netflix.list,tag=Netflix, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/QuantumultX/Disney/Disney.list,tag=Disney, enabled=true
+
+https://r.sveir.xyz/Rules/Services/Microsoft.list, tag=Microsoft, enabled=true
+https://r.sveir.xyz/Rules/Services/Apple.list, tag=Apple, enabled=true
 https://r.sveir.xyz/Rules/Advertising/Hijacking.list, tag=Hijacking, enabled=true
 https://r.sveir.xyz/Rules/Advertising/AdReject.list, tag=Advertising, enabled=true
-https://r.sveir.xyz/Rules/Services/Google.list, tag=Google, enabled=true
-https://r.sveir.xyz/Rules/Services/Microsoft.list, tag=Microsoft, enabled=true
-https://r.sveir.xyz/Rules/Media/DomesticMedia.list, tag=DomesticMedia, force-policy=direct, enabled=true
-https://r.sveir.xyz/Rules/Media/ForeignMedia.list, tag=ForeignMedia, force-policy=OutSide, enabled=true
-https://r.sveir.xyz/Rules/Region/Global.list, tag=Global, force-policy=OutSide, enabled=true
-https://r.sveir.xyz/Rules/Services/Apple.list, tag=Apple, force-policy=direct, enabled=true
+
+https://r.sveir.xyz/Rules/Services/Google.list, tag=Google, force-policy=Proxy, enabled=true
+https://r.sveir.xyz/Rules/Region/Global.list, tag=Global, force-policy=Proxy, enabled=true
 https://r.sveir.xyz/Rules/Region/China.list, tag=Domestic, force-policy=direct, enabled=true
+https://r.sveir.xyz/Rules/Media/DomesticMedia.list, tag=DomesticMedia, force-policy=direct, enabled=true
+
+
 
 [rewrite_local]
 
