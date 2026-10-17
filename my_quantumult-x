@@ -1,86 +1,133 @@
-#从这里开始复制 包括开头这个#井号
-;预配置作者
-;毒奶博主
-;limbopro.com
-;09.11.2024 更新   
-;https://t.me/limboprossr 关注更新
-;https://t.me/Adblock4limbo 群组反馈与讨论交流
+# 基于 Quantumult X 官方标准 Sample V1.5.3
+#
+# 以 ';' 或 '#' 或 '//' 开头的配置文件行为注释行
+#
+# 最后更新时间: 2025 年 9 月 25 日 14:12:50
+#
+# ================
 
+# 基础部分
 [general]
+// > 配置文件图标
+profile_img_url = https://img.sveir.xyz/static/favicon%40trs.png
+// > 网络测试链接
+network_check_url = http://www.bing.com
+// > 服务器测试链接
+server_check_url = http://www.gstatic.com/generate_204
+// > 服务器测试超时时间 (毫秒)
+server_check_timeout = 3000
+// > 节点 GEO 位置信息检测
+// 如果不需识别节点地区为中文和显示国旗，请将下面行 geo_location_checker 进行注释ß
+geo_location_checker = http://ip-api.com/json/?lang=zh-CN,https://cdn.jsdelivr.net/gh/KOP-XIAO/QuantumultX@master/Scripts/IP_API.js
+// > 指定 WiFi SSID 下的运行模式
+// 如果需要指定 对应 SSID 的运行模式,请取消下列注释并自定配置
+;running_mode_trigger = filter, filter, asus-5g:all_direct, asus:all_proxy
+// > 资源解析器
+resource_parser_url = https://cdn.jsdelivr.net/gh/KOP-XIAO/QuantumultX@master/Scripts/resource-parser.js
+// > DNS 排除列表
+// 不使用 fakeip 映射，可一定程度防止检测到使用代理
+dns_exclusion_list = *.lan, cable.auth.com, *.msftconnecttest.com, *.msftncsi.com, network-test.debian.org, detectportal.firefox.com, resolver1.opendns.com, *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com, stun.*, *.qq.com, localhost.*.qq.com, *.logon.battlenet.com.cn, *.logon.battle.net, *.blzstatic.cn, *.cmpassport.com, id6.me, open.e.189.cn, mdn.open.wo.cn, auth.wosms.cn, *.jegotrip.com.cn, *.icitymobile.mobi, *.pingan.com.cn, *.cmbchina.com, *?miwifi.com, pool.ntp.org, *.pool.ntp.org, ntp.*.com, time.*.com, ntp?.*.com, time?.*.com, time.*.gov, time.*.edu.cn, *.ntp.org.cn, time.*.apple.com, PDC._msDCS.*.*, DC._msDCS.*.*, GC._msDCS.*.*
+// > 排除路由
+// 以下 ip-cidr 中的路由将不经由 QuantumultX 进行处理
+excluded_routes = 192.168.0.0/16, 172.16.0.0/12, 100.64.0.0/10, 10.0.0.0/8, 239.255.255.250/32
 
-#解析器作者 @XIAO_KOP 
-resource_parser_url=https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/resource-parser.js
-
-#IP_API 改自 @XIAO_KOP
-geo_location_checker=http://ip-api.com/json/?lang=zh-CN, https://raw.githubusercontent.com/limbopro/QuantumultX/master/Scripts/IP_API.js
-
-
+# 域名解析部分
 [dns]
+// 如果您需要禁用系统 DNS（no-system), 请取消下行注释
+;no-system
+// 如果您需要禁用 IPv6, 请取消下行注释
 ;no-ipv6
-no-system
-server=223.5.5.5
-server=114.114.114.114
-server=119.29.29.29
-server=[2400:3200:baba::1]
-server=[2400:3200::1]
+// 如需使用 DNS over HTTP/3，请取消下行注释
+;prefer-doh3
 
+// 指定 DNS 服务器，并发响应选取最优结果
+server = 119.29.29.29
+server = 182.254.116.116
+server = 223.5.5.5
+server = 223.6.6.6
+server = 119.28.28.28
+
+# ⚠️ 注意 不建议在此对 微信以及QQ等即时通讯工具进行 指定域名分配DNS
+# 此操作将可能导致微信消息延迟推送
+
+// 如果需要指定 DNS over HTTP 服务，则上列指定的 DNS 服务器 *均将失效* ，在特定网络下禁用该 doh
+;doh-server = https://doh.pub/dns-query, https://223.5.5.5/dns-query, https://223.6.6.6/dns-query
+
+# 分流策略组
 [policy]
-static=🛑 广告拦截, REJECT, PROXY, DIRECT, img-url=https://raw.githubusercontent.com/limbopro/Qure/master/IconSet/Advertising.png
-available=♻️ 故障切换, 无用节点1, 无用节点2, img-url=https://raw.githubusercontent.com/limbopro/Zure/master/IconSet/Available.png
-static=✈️ 机场专线, PROXY, DIRECT, ♻️ 故障切换, img-url=https://raw.githubusercontent.com/limbopro/Zure/master/IconSet/rocket.png
-static=🍎 苹果服务, DIRECT, PROXY, ♻️ 故障切换, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Apple.png
-static=🤖 AI Platforms, PROXY, DIRECT, img-url=https://raw.githubusercontent.com/limbopro/Zure/master/AI%20Platforms.png
-static=🎥 Netflix, PROXY, img-url=https://raw.githubusercontent.com/limbopro/Zure/master/IconSet/Netflix_Letter.png
-static=🐭 Disney+, PROXY, img-url=https://raw.githubusercontent.com/limbopro/Zure/master/IconSet/Disney+.png
-static=🎵 TikTok, PROXY, img-url=https://raw.githubusercontent.com/limbopro/Zure/master/IconSet/TikTok.png
-static=🐟 Final, PROXY, ♻️ 故障切换, DIRECT, 🛑 广告拦截, img-url=https://raw.githubusercontent.com/limbopro/Zure/master/IconSet/Final.png
+static = OutSide, Hong Kong, Singapore, Taiwan, United States, Japan, Korea, Other, direct,  img-url=https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Airport.png
+static = Final, OutSide, direct, img-url=https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png
+// 分流
+static = DomesticMedia, direct, OutSide, img-url= https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Domestic.png
+static = Domestic, direct, OutSide, img-url= https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Back.png
+static = Apple, direct, OutSide, img-url= https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png
+static = Apple Domestic, direct, OutSide, img-url= https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple_Update.png
+static = Google, OutSide, img-url=https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google.png
+static = Google Domestic, direct, OutSide, img-url= https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png
+static = Microsoft, direct, OutSide, img-url=https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png
+static = Microsoft Domestic, direct, OutSide, img-url= https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png
+static = Hijacking, reject, direct, img-url=https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hijacking.png
+static = Advertising, reject, img-url= https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Advertising.png
+// 按地区分类
+static = Hong Kong, resource-tag-regex=🧁 我的订阅, server-tag-regex=香港|Hong Kong|HK|hk, img-url=https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png
+static = Singapore, resource-tag-regex=🧁 我的订阅, server-tag-regex=新加坡|Singapore|SG|sg, img-url=https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Singapore.png
+static = Taiwan, resource-tag-regex=🧁 我的订阅, server-tag-regex=台湾|Taiwan|TW|tw|台北, img-url=https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taiwan.png
+static = United States, resource-tag-regex=🧁 我的订阅, server-tag-regex=美国|United States|US|us, img-url=https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png
+static = Japan, resource-tag-regex=🧁 我的订阅, server-tag-regex=日本|Japan|JP|jp, img-url=https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png
+static = Korea, resource-tag-regex=🧁 我的订阅, server-tag-regex=韩国|Korea|KR|kr, img-url=https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Korea.png
+static = Other, resource-tag-regex=🧁 我的订阅, server-tag-regex=印度|巴西|阿根廷|英国|澳门|土耳其|挪威|瑞士|俄罗斯|瑞典|爱尔兰|法国|菲律宾|越南|泰国|印度尼西亚|德国|英国|荷兰|乌克兰, img-url=https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AIA.png
 
-[server_remote]
-
-
-[filter_remote]
-https://raw.githubusercontent.com/limbopro/Profiles4limbo/main/airports.list, tag=机场专线, force-policy=✈️ 机场专线, enabled=true
-https://limbopro.com/Adblock4limbo.list, tag=毒奶特供(去网页广告计划), force-policy=🛑 广告拦截, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Netflix/Netflix.list, tag=🎥 Netflix, force-policy=🎥 Netflix, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Disney/Disney.list, tag=🐭 Disney+, force-policy=🐭 Disney+, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/TikTok/TikTok.list,tag=🎵 TikTok, force-policy=🎵 TikTok, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Apple/Apple.list, tag=🍎 苹果服务, force-policy=🍎 苹果服务, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/OpenAI/OpenAI.list, tag=🤖 AI Platforms, force-policy=🤖 AI Platforms, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/BardAI/BardAI.list, tag=🤖 AI Platforms, force-policy=🤖 AI Platforms, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Claude/Claude.list, tag=🤖 AI Platforms, force-policy=🤖 AI Platforms, enabled=true
-https://raw.githubusercontent.com/limbopro/Profiles4limbo/main/AI_Platforms_qx.list, tag=🤖 AI Platforms, force-policy=🤖 AI Platforms, enabled=true
-
-[rewrite_remote]
-https://limbopro.com/Adblock4limbo.conf, tag=毒奶特供(去网页广告计划), enabled=true
-https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/config/QX.snippet, tag=Sub-store(高级订阅管理器), enabled=true
 
 [server_local]
-shadowsocks=example.com:80, method=aes-128-gcm, password=pwd, obfs=ws, fast-open=false, tag=无用节点1
-shadowsocks=example.com:80, method=aes-128-gcm, password=pwd, obfs=ws, fast-open=false, tag=无用节点2
-vless://2ce4ad71-09a7-47f7-c012-6a47e9385d83@v-aws-sg.cmav.pp.ua:9012?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.icloud.com&fp=chrome&pbk=Z-sPjOrL2aDdYzU415JnfYpgAZkju-cRnXAwWy2hEU4&spx=%2Ffavicon.ico&type=tcp&headerType=none#my_door-sg, tag=my_door-sg
-vless://68be8668-8396-400f-8e96-4e9a123a4f7b@v-aws-sg.cmav.pp.ua:9013?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.icloud.com&fp=chrome&pbk=TWeGtv1L4jIihG57PLVUd5meig-ZzZOSUVNPmYDxbEk&spx=%2Ffavicon.ico&type=tcp&headerType=none#my_door_us, tag=my_door_us
-vless://59ad60a5-949e-4f78-9047-dcaef16d80d5@v-aws-sg.cmav.pp.ua:9016?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.icloud.com&fp=chrome&pbk=T3tLFuAE0-FzZKesVqLsDs9CbxCGxS-8-GsGNd1dyiQ&sid=e56780831c&spx=%2Ffavicon.ico&type=tcp&headerType=none#my_door_us2, tag=my_door_us2
-vless://8a080a91-bf30-4a6e-cea3-f1dabc827b1d@v-aws-sg.cmav.pp.ua:9014?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.icloud.com&fp=chrome&pbk=BtMlfNIfCNyK_mz9yHCBUvN-jYJXylekZeDEghXm0QI&spx=%2Ffavicon.ico&type=tcp&headerType=none#my_door-de, tag=my_door-de
-vless://68be8668-8396-400f-8e96-4e9a123a4f7b@v-ccs-us.cmav.pp.ua:9001?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.icloud.com&fp=chrome&pbk=TWeGtv1L4jIihG57PLVUd5meig-ZzZOSUVNPmYDxbEk&spx=%2Ffavicon.ico&type=tcp&headerType=none#my_vless_ccs-us, tag=my_vless_ccs-us
-vless://78f53b9f-309e-499a-ded5-428c0d47516d@v-aws-sg.cmav.pp.ua:9001?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.icloud.com&fp=chrome&pbk=6LpFtAfd47Zxq06m7NU2klWTMxp7Vt7QPJpvxKktGzE&spx=%2Ffavicon.ico&type=tcp&headerType=none#my_vless_aws-sg, tag=my_vless_aws-sg
-vless://2ce4ad71-09a7-47f7-c012-6a47e9385d83@v-oracle-sg.cmav.pp.ua:9001?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.icloud.com&fp=chrome&pbk=Z-sPjOrL2aDdYzU415JnfYpgAZkju-cRnXAwWy2hEU4&spx=%2Ffavicon.ico&type=tcp&headerType=none#my_vless_oracle-sg, tag=my_vless_oracle-sg
-vless://8a080a91-bf30-4a6e-cea3-f1dabc827b1d@v-netcup-de.cmav.pp.ua:9001?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.icloud.com&fp=chrome&pbk=BtMlfNIfCNyK_mz9yHCBUvN-jYJXylekZeDEghXm0QI&spx=%2Ffavicon.ico&type=tcp&headerType=none#my_vless_netcup-de, tag=my_vless_netcup-de
+
+[server_remote]
+https://example.com/subscribe.snippet,tag=🧁 我的订阅,enabled=true, img-url= https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Heart.png
 
 
 [filter_local]
-geoip, cn, direct
+#本地分流规则(对于完全相同的某条规则，本地的将优先生效)
 ip-cidr, 10.0.0.0/8, direct
 ip-cidr, 127.0.0.0/8, direct
 ip-cidr, 172.16.0.0/12, direct
 ip-cidr, 192.168.0.0/16, direct
 ip-cidr, 224.0.0.0/24, direct
-final, 🐟 Final
+# 已采用 ip 池数据，因此注释掉 geoip cn
+;geoip, cn, direct
+final, Final
+
+[filter_remote]
+https://r.sveir.xyz/Rules/Advertising/Hijacking.list, tag=Hijacking, enabled=true
+https://r.sveir.xyz/Rules/Advertising/AdReject.list, tag=Advertising, enabled=true
+https://r.sveir.xyz/Rules/Services/Google.list, tag=Google, enabled=true
+https://r.sveir.xyz/Rules/Services/Microsoft.list, tag=Microsoft, enabled=true
+https://r.sveir.xyz/Rules/Media/DomesticMedia.list, tag=DomesticMedia, force-policy=direct, enabled=true
+https://r.sveir.xyz/Rules/Media/ForeignMedia.list, tag=ForeignMedia, force-policy=OutSide, enabled=true
+https://r.sveir.xyz/Rules/Region/Global.list, tag=Global, force-policy=OutSide, enabled=true
+https://r.sveir.xyz/Rules/Services/Apple.list, tag=Apple, force-policy=direct, enabled=true
+https://r.sveir.xyz/Rules/Region/China.list, tag=Domestic, force-policy=direct, enabled=true
 
 [rewrite_local]
 
+[rewrite_remote]
+# 网页去广告
+https://r.sveir.xyz/Rewrite/AdBlock/WebAdBlock.adblock, tag=常用网页去广告
+
+# 知乎去广告
+https://r.sveir.xyz/Rewrite/AdBlock/Zhihu.adblock, tag=知乎去广告
+
+# 微博去广告
+https://r.sveir.xyz/Rewrite/AdBlock/Weibo.adblock, tag=微博去广告
+
+# Youtube 去广告
+https://r.sveir.xyz/Rewrite/AdBlock/Youtube.adblock, tag=Youtube 去广告
+
+# Rewrite 复写远程订阅
+https://r.sveir.xyz/Rewrite/Advertising.adblock, tag=通用去广告
+
 [task_local]
+# 流媒体查询脚本
+event-interaction https://cdn.jsdelivr.net/gh/KOP-XIAO/QuantumultX@master/Scripts/streaming-ui-check.js, tag = 流媒体 - 解锁查询，img-url=checkmark.seal.system, enabled=true
 
 [http_backend]
 
 [mitm]
-#到这里结束
