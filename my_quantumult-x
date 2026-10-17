@@ -57,6 +57,15 @@ https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/config/QX.snippet, ta
 [server_local]
 shadowsocks=example.com:80, method=aes-128-gcm, password=pwd, obfs=ws, fast-open=false, tag=无用节点1
 shadowsocks=example.com:80, method=aes-128-gcm, password=pwd, obfs=ws, fast-open=false, tag=无用节点2
+vless://2ce4ad71-09a7-47f7-c012-6a47e9385d83@v-aws-sg.cmav.pp.ua:9012?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.icloud.com&fp=chrome&pbk=Z-sPjOrL2aDdYzU415JnfYpgAZkju-cRnXAwWy2hEU4&spx=%2Ffavicon.ico&type=tcp&headerType=none#my_door-sg, tag=my_door-sg
+vless://68be8668-8396-400f-8e96-4e9a123a4f7b@v-aws-sg.cmav.pp.ua:9013?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.icloud.com&fp=chrome&pbk=TWeGtv1L4jIihG57PLVUd5meig-ZzZOSUVNPmYDxbEk&spx=%2Ffavicon.ico&type=tcp&headerType=none#my_door_us, tag=my_door_us
+vless://59ad60a5-949e-4f78-9047-dcaef16d80d5@v-aws-sg.cmav.pp.ua:9016?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.icloud.com&fp=chrome&pbk=T3tLFuAE0-FzZKesVqLsDs9CbxCGxS-8-GsGNd1dyiQ&sid=e56780831c&spx=%2Ffavicon.ico&type=tcp&headerType=none#my_door_us2, tag=my_door_us2
+vless://8a080a91-bf30-4a6e-cea3-f1dabc827b1d@v-aws-sg.cmav.pp.ua:9014?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.icloud.com&fp=chrome&pbk=BtMlfNIfCNyK_mz9yHCBUvN-jYJXylekZeDEghXm0QI&spx=%2Ffavicon.ico&type=tcp&headerType=none#my_door-de, tag=my_door-de
+vless://68be8668-8396-400f-8e96-4e9a123a4f7b@v-ccs-us.cmav.pp.ua:9001?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.icloud.com&fp=chrome&pbk=TWeGtv1L4jIihG57PLVUd5meig-ZzZOSUVNPmYDxbEk&spx=%2Ffavicon.ico&type=tcp&headerType=none#my_vless_ccs-us, tag=my_vless_ccs-us
+vless://78f53b9f-309e-499a-ded5-428c0d47516d@v-aws-sg.cmav.pp.ua:9001?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.icloud.com&fp=chrome&pbk=6LpFtAfd47Zxq06m7NU2klWTMxp7Vt7QPJpvxKktGzE&spx=%2Ffavicon.ico&type=tcp&headerType=none#my_vless_aws-sg, tag=my_vless_aws-sg
+vless://2ce4ad71-09a7-47f7-c012-6a47e9385d83@v-oracle-sg.cmav.pp.ua:9001?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.icloud.com&fp=chrome&pbk=Z-sPjOrL2aDdYzU415JnfYpgAZkju-cRnXAwWy2hEU4&spx=%2Ffavicon.ico&type=tcp&headerType=none#my_vless_oracle-sg, tag=my_vless_oracle-sg
+vless://8a080a91-bf30-4a6e-cea3-f1dabc827b1d@v-netcup-de.cmav.pp.ua:9001?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.icloud.com&fp=chrome&pbk=BtMlfNIfCNyK_mz9yHCBUvN-jYJXylekZeDEghXm0QI&spx=%2Ffavicon.ico&type=tcp&headerType=none#my_vless_netcup-de, tag=my_vless_netcup-de
+
 
 [filter_local]
 geoip, cn, direct
