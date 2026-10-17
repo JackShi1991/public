@@ -136,7 +136,6 @@ https://yfamilys.com/rewrite/CamScanner.conf, tag=扫描全能王, update-interv
 https://yfamilys.com/rewrite/ZhihuBlock.conf,tag=知乎去广告, update-interval=172800, opt-parser=false, enabled=true
 https://yfamilys.com/rewrite/weiboad.conf,tag=微博去广告, update-interval=172800, opt-parser=false, enabled=true
 https://yfamilys.com/rewrite/biliad.conf,tag=哔哩哔哩去广告, update-interval=172800, opt-parser=false, enabled=true
-https://yfamilys.com/rewrite/tpp.conf,tag=支付宝内淘票票显示豆瓣评分, update-interval=172800, opt-parser=false, enabled=true
 https://yfamilys.com/rewrite/wyyyy.conf,tag=网易云音质解锁, update-interval=172800, opt-parser=false, enabled=true
 https://yfamilys.com/rewrite/wechatad.conf,tag=微信公众号去广告, update-interval=172800, opt-parser=false, enabled=true
 https://yfamilys.com/rewrite/AdBlock.conf,tag=广告屏蔽, update-interval=172800, opt-parser=false, enabled=true
