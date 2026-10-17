@@ -5,6 +5,8 @@
 # 最后更新时间: 2025 年 9 月 25 日 14:12:50
 #
 # ================
+;https://github.com/blackmatrix7/ios_rule_script/tree/master/rule
+;https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/
 
 # 基础部分
 [general]
@@ -57,7 +59,7 @@ doh-server = https://doh.pub/dns-query, https://223.5.5.5/dns-query, https://223
 static = OutSide, Hong Kong, Singapore, Taiwan, United States, Japan, Korea, Other, direct,  img-url= https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Airport.png
 static = ChatAI, Hong Kong, Singapore, Taiwan, United States, Japan, Korea, Other, direct,  img-url= https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png
 static = Netflix, Hong Kong, Singapore, Taiwan, United States, Japan, Korea, Other, direct,  img-url= https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png
-static = Disney, Hong Kong, Singapore, Taiwan, United States, Japan, Korea, Other, direct,  img-url= https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Disney+_1.png
+static = Disney, Hong Kong, Singapore, Taiwan, United States, Japan, Korea, Other, direct,  img-url= https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Disney+.png
 
 static = Apple, Hong Kong, Singapore, Taiwan, United States, Japan, Korea, Other, direct,  img-url= https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png
 static = Microsoft, Hong Kong, Singapore, Taiwan, United States, Japan, Korea, Other, direct,  img-url= https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png
