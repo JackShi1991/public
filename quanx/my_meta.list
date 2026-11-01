@@ -1,0 +1,12 @@
+# === Meta 核心及旗下服务 ===
+HOST-SUFFIX, meta.com, proxy
+HOST-SUFFIX, facebook.com, proxy
+HOST-SUFFIX, fbcdn.net, proxy
+HOST-SUFFIX, instagram.com, proxy
+HOST-SUFFIX, whatsapp.com, proxy
+HOST-SUFFIX, messenger.com, proxy
+HOST-SUFFIX, threads.net, proxy
+HOST-SUFFIX, meta.ai, proxy
+HOST-SUFFIX, metaaivm.com, proxy
+HOST-KEYWORD, muse, proxy
+HOST-SUFFIX, muse.ai, proxy
