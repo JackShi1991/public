@@ -1,0 +1,16 @@
+# === Meta 核心及旗下服务 ===
+- DOMAIN-SUFFIX,meta.com
+- DOMAIN-SUFFIX,facebook.com
+- DOMAIN-SUFFIX,fbcdn.net
+- DOMAIN-SUFFIX,instagram.com
+- DOMAIN-SUFFIX,whatsapp.com
+- DOMAIN-SUFFIX,messenger.com
+- DOMAIN-SUFFIX,threads.net
+  
+# === Meta AI / 衍生服务（含日志中出现的 hatch.metaaivm.com） ===
+- DOMAIN-SUFFIX,meta.ai
+- DOMAIN-SUFFIX,metaaivm.com
+  
+# === Muse 相关服务及可能关联的域名关键字 ===
+- DOMAIN-KEYWORD,muse
+- DOMAIN-SUFFIX,muse.ai
