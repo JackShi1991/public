@@ -1,5 +1,4 @@
 DOMAIN-SUFFIX,grok.com
-DOMAIN-SUFFIX,cmav.pp.ua
 DOMAIN,cr.m365copilotapp.svc.cloud.microsoft
 
 ##- PROCESS-NAME,curl,DIRECT #匹配路由自身进程(curl直连)
